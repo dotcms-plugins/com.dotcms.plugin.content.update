@@ -1,7 +1,12 @@
 # BATCH CONTENT UPDATE VIA REST
 This is an example OSGi plugin that will let you update 1 field on a contentlet or a list of contentlets specified by the query you pass in. All other properties of the updated contents will remain the same.  This provides an example of easy way to do batch updates. 
 
-To use it, send a json object in this form:
+## How to build
+git clone 
+
+
+## How to use
+To use it, PUT to `/api/contentUpdate/update` in this form:
 ```
 {
     "field": "THE FIELD VARIABLE YOU WANT TO UPDATE",
@@ -11,8 +16,8 @@ To use it, send a json object in this form:
 }
 
 ```
-
-### Updates the byline field on a news item on demo site without publishing the changes
+## Examples
+Updates the byline field on a news item on demo site without publishing the changes
 ```
 curl -v -u admin@dotcms.com:admin -XPUT http://localhost:8080/api/contentUpdate/update -H "Content-Type: application/json" -H "Accept: application/json" -d '{
     "field": "byline",
@@ -20,7 +25,7 @@ curl -v -u admin@dotcms.com:admin -XPUT http://localhost:8080/api/contentUpdate/
     "query": "+identifier:2943b5eb-9105-4dcf-a1c7-87a9d4dc92a6"
 }'
 ```
-### Updates the byline field on a news item on demo site  and then publishes the changes
+Updates the byline field on a news item on demo site  and then publishes the changes
 ```
 curl -v -u admin@dotcms.com:admin -XPUT http://localhost:8080/api/contentUpdate/update -H "Content-Type: application/json" -H "Accept: application/json" -d '{
     "field": "byline",
@@ -30,7 +35,7 @@ curl -v -u admin@dotcms.com:admin -XPUT http://localhost:8080/api/contentUpdate/
 }'
 ```
 
-### Updates the publish date on a blog entry on demo site  and then publishes the changes
+Updates the publish date on a blog entry on demo site  and then publishes the changes
 ```
 curl -v -u admin@dotcms.com:admin -XPUT http://localhost:8080/api/contentUpdate/update -H "Content-Type: application/json" -H "Accept: application/json" -d '{
     "field": "sysPublishDate",
@@ -39,7 +44,8 @@ curl -v -u admin@dotcms.com:admin -XPUT http://localhost:8080/api/contentUpdate/
     "publish" : true
 }'
 ```
-### Updates the publish date on ALL blog entries on demo site  and then publishes the changes
+
+Updates the publish date on ALL blog entries on demo site  and then publishes the changes
 ```
 curl -v -u admin@dotcms.com:admin -XPUT http://localhost:8080/api/contentUpdate/update -H "Content-Type: application/json" -H "Accept: application/json" -d '{
     "field": "sysPublishDate",
