@@ -1,4 +1,4 @@
-# BATCH CONTENT UPDATE VIA REST
+# Batch Content Update via REST
 This is an example OSGi plugin that will let you update 1 field on a contentlet or a list of contentlets specified by the query you pass in. All other properties of the updated contents will remain the same.  This provides an example of easy way to do batch updates. 
 
 ## How to build
