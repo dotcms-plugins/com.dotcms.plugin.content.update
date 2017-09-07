@@ -13,9 +13,9 @@ then upload to your dotCMS server.
 To use it, PUT to `/api/contentUpdate/update` in this form:
 ```
 {
-    "field": "THE FIELD VARIABLE YOU WANT TO UPDATE",
-    "value": "THE NEW VALUE AS A STRING- you can pass in a bool, date, string, int and the system will deal with it",
-    "query": "THE LUCENE QUERY TO SPECIFY WHAT CONTENT YOU WANT TO UPDATE",
+    "field": "Content Type field variable you want to update",
+    "value": "The new value as a String.  You can pass in a bool, date, string, int and the system will deal with it",
+    "query": "Lucene query to specify content you want to update",
     "publish" : true or false
 }
 
